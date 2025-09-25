@@ -1,0 +1,21 @@
+-- Task3
+-- use select *
+USE carrental;
+SELECT * FROM CUSTOMER;
+-- select specific column
+SELECT Model, Type, DailyRate FROM CAR;
+-- applying where class
+SELECT * FROM CUSTOMER WHERE Address LIKE '%Chennai%';
+-- applying where with AND
+SELECT * FROM CAR WHERE Type='SUV' AND DailyRate>2000;
+-- applying where with or
+SELECT * FROM CUSTOMER WHERE Address like '%Salem%' or Address like '%Madurai%';
+-- applying LIKE operator
+SELECT * FROM CUSTOMER WHERE Name LIKE 'K%';
+SELECT * FROM CUSTOMER WHERE Email LIKE '%gmail%';
+-- applying between operator
+SELECT * FROM CAR WHERE DailyRate BETWEEN 1500 AND 2000;
+SELECT * FROM RENTALS WHERE Start_Date BETWEEN '2025-09-02' AND '2025-09-08';
+-- sort with order by
+SELECT * FROM CAR ORDER BY DailyRate ASC;
+SELECT * FROM RENTALS ORDER BY Amount_Due DESC;
